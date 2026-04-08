@@ -1,0 +1,196 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 211 46% 14%;
+    --foreground: 210 20% 95%;
+
+    --card: 211 50% 16%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 211 50% 16%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 211 46% 14%;
+
+    --secondary: 211 50% 20%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 211 50% 25%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 211 46% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 95%;
+
+    --border: 211 50% 20%;
+    --input: 211 50% 20%;
+    --ring: 180 100% 50%;
+
+    --radius: 1.25rem;
+
+    /* Water theme colors - Cyan accent (Enigmatic) */
+    --water-50: 180 100% 95%;
+    --water-100: 180 100% 85%;
+    --water-200: 180 100% 75%;
+    --water-300: 180 100% 65%;
+    --water-400: 180 100% 55%;
+    --water-500: 180 100% 50%;
+    --water-600: 180 100% 45%;
+    --water-700: 180 100% 35%;
+    --water-800: 180 100% 25%;
+    --water-900: 180 100% 15%;
+
+    /* Earth theme colors - Deep browns */
+    --earth-50: 25 60% 95%;
+    --earth-100: 25 60% 85%;
+    --earth-200: 25 55% 75%;
+    --earth-300: 25 50% 65%;
+    --earth-400: 25 45% 55%;
+    --earth-500: 25 50% 45%;
+    --earth-600: 25 50% 35%;
+    --earth-700: 25 50% 25%;
+    --earth-800: 25 50% 15%;
+    --earth-900: 25 50% 10%;
+
+    /* Nature theme colors - Electric Lime (Enigmatic) */
+    --nature-50: 80 100% 95%;
+    --nature-100: 80 100% 85%;
+    --nature-200: 80 100% 75%;
+    --nature-300: 80 100% 65%;
+    --nature-400: 80 100% 55%;
+    --nature-500: 80 100% 50%;
+    --nature-600: 80 100% 45%;
+    --nature-700: 80 100% 35%;
+    --nature-800: 80 100% 25%;
+    --nature-900: 80 100% 15%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 211 56% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 211 50% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 211 50% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 211 56% 8%;
+
+    --secondary: 211 50% 16%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 211 50% 20%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 211 56% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 95%;
+
+    --border: 211 50% 16%;
+    --input: 211 50% 16%;
+    --ring: 180 100% 50%;
+
+    --sidebar-background: 211 56% 8%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 211 56% 8%;
+    --sidebar-accent: 211 50% 16%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 211 50% 16%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  /* Enigmatic Glassmorphism Effect */
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-xl;
+  }
+
+  /* Neon Glow Effects */
+  .neon-glow-cyan {
+    @apply shadow-lg shadow-cyan-500/50;
+  }
+
+  .neon-glow-lime {
+    @apply shadow-lg shadow-lime-500/50;
+  }
+
+  .neon-text-cyan {
+    @apply text-cyan-400 drop-shadow-lg;
+  }
+
+  .neon-text-lime {
+    @apply text-lime-400 drop-shadow-lg;
+  }
+
+  /* Deep shadows for enigmatic feel */
+  .deep-shadow {
+    @apply shadow-2xl shadow-black/50;
+  }
+
+  /* Enigmatic gradient backgrounds */
+  .enigma-bg {
+    @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900;
+  }
+
+  .enigma-card {
+    @apply glass-effect deep-shadow rounded-2xl;
+  }
+}
