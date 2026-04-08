@@ -1,0 +1,1 @@
+Aqua Harvest is a web-based tool that helps homeowners decide whether to install a rainwater harvesting system. The user enters their roof dimensions, type, and location, and the app analyzes regional rainfall data to determine if it's feasible and estimates the cost. I led the team and worked on both the frontend and the data analysis logic
